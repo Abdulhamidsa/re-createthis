@@ -1,0 +1,227 @@
+:root {
+    --background-color-primary: #f2efea;
+    --background-color-secondary: #ffffff;
+    --primary-font-color: #818181;
+    --secondary-font-color: #704142;
+    --third-font-color: #000000;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color-primary);
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+article {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    gap: 45px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 450px));
+}
+
+img {
+    margin: auto;
+    padding: auto;
+    width: 100%;
+}
+
+.path-section {
+    display: flex;
+    flex-direction: column;
+    display: block;
+    margin-bottom: 4rem;
+    margin-left: 2rem;
+}
+
+.path-section :not(:first-child) {
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.path-section .logo {
+    border: 1px black solid;
+    background-color: #000000;
+    color: #ffffff;
+    letter-spacing: 3px;
+    display: inline-block;
+    font-weight: 900;
+    font-family: sans-serif;
+    padding: 0.3rem 1.5rem 0.3rem;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.path-section .logo::after {
+    content: "\2022";
+    position: absolute;
+    left: 5%;
+}
+
+.path-section .logo::before {
+    content: "\2022";
+    position: absolute;
+    right: 5%;
+}
+
+.path {
+    display: flex;
+    flex-direction: row;
+}
+
+.path>a {
+    color: var(--primary-font-color);
+}
+
+.path :first-child::after {
+    content: "-";
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+.path :not(:first-child) {
+    color: var(--secondary-font-color);
+}
+
+.path :not(:first-child)::after {
+    content: "/";
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.path :last-child::after {
+    content: "";
+}
+
+.bike-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background-color: var(--background-color-secondary);
+    padding-left: 1rem;
+    margin-bottom: 7rem;
+}
+
+.cart-details {
+    width: 97%;
+}
+
+.cart-info {
+    border: 1px rgb(240, 240, 240) solid;
+    padding: 1rem 1rem 0rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-brand {
+    line-height: 5px;
+    border-bottom: 3px rgb(212, 212, 212) solid;
+    margin-bottom: 1rem;
+}
+
+.name {
+    color: rgba(0, 0, 0, 0.61);
+    letter-spacing: 9px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.brand {
+    color: rgba(66, 66, 66, 0.87);
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.price-rang,
+.item-availability,
+.item-color {
+    border-bottom: 1px rgb(240, 240, 240) solid;
+    line-height: 9px;
+    margin-bottom: 1rem;
+    margin: 0;
+}
+
+.price-rang>p,
+.item-color>p,
+.item-availability :first-child {
+    color: var(--primary-font-color);
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.item-price>*,
+.availability {
+    color: #1f1f1f;
+    font-style: italic;
+    font-family: serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.price-rang>p::after,
+.item-color>p::after,
+.item-availability :nth-child(1)::after {
+    content: " " " - ";
+    padding-right: 0.5rem;
+}
+
+.item-price {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-price :first-child::after {
+    content: "-";
+    color: var(--third-font-color);
+}
+
+.price-rang,
+.item-color,
+.item-availability {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-color {
+    display: flex;
+    flex-direction: row;
+}
+
+.color1,
+.color2,
+.color3,
+.color4,
+.color5 {
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    color: #000000;
+}
+
+.all-colors {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.info-button {
+    width: 34%;
+    padding: 0.5rem;
+    margin: 1rem;
+    align-self: center;
+    background-color: var(--background-color-secondary);
+    border: 2px solid #8e8083;
+    font-size: 1rem;
+    color: var(--secondary-font-color);
+    font-weight: 700;
+}
