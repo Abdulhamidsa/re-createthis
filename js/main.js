@@ -24,7 +24,7 @@ async function displaybike(userJSON) {
         copy.querySelector(".color3").style.backgroundColor = bikes.color3;
         copy.querySelector(".color4").style.backgroundColor = bikes.color4;
         copy.querySelector(".color5").style.backgroundColor = bikes.color5;
-
+        console.log(bikes._embedded["wp:term"][0][0].name);
         /*         copy.querySelector("bike-image").setAttribute();
          */
         copy.querySelector(".bike-image").src = bikes.image.guid;
