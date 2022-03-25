@@ -208,8 +208,14 @@ a {
 .color5 {
     width: 20px;
     height: 20px;
-    background-color: #000000;
-    color: #000000;
+}
+
+.color1:hover,
+.color2:hover,
+.color3:hover,
+.color4:hover,
+.color5 :hover {
+    cursor: pointer;
 }
 
 .all-colors {
