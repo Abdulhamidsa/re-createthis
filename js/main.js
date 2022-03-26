@@ -15,7 +15,8 @@ async function displaybike(userJSON) {
     userJSON.forEach((bikes) => {
         const template = document.querySelector("#bikeProductTemplate").content;
         const copy = template.cloneNode(true);
-        copy.querySelector(".brand").textContent = bikes.brand;
+        copy.querySelector(".brand").textContent =
+            bikes._embedded["wp:term"][0][0].name;
         copy.querySelector(".name").textContent = bikes.title.rendered;
         copy.querySelector(".item-price").textContent = bikes.price + " $ ";
         copy.querySelector(".availability").textContent = bikes.availability;
@@ -24,7 +25,8 @@ async function displaybike(userJSON) {
         copy.querySelector(".color3").style.backgroundColor = bikes.color3;
         copy.querySelector(".color4").style.backgroundColor = bikes.color4;
         copy.querySelector(".color5").style.backgroundColor = bikes.color5;
-        console.log(bikes._embedded["wp:term"][0][0].name);
+        /*         console.log(bikes._embedded["wp:term"][0][0].name);
+         */
         /*         copy.querySelector("bike-image").setAttribute();
          */
         copy.querySelector(".bike-image").src = bikes.image.guid;
